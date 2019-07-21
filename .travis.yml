@@ -11,16 +11,16 @@ scripts:
 language: generic
 
 after_success:
-  - docker build -t sireskip/milti-client ./client
-  - docker build -t sireskip/milti-nginx ./nginx
-  - docker build -t sireskip/milti-server ./server
-  - docker build -t sireskip/milti-worker ./worker
+  - docker build -t sirskip/milti-client ./client
+  - docker build -t sirskip/milti-nginx ./nginx
+  - docker build -t sirskip/milti-server ./server
+  - docker build -t sirskip/milti-worker ./worker
   # Log into the Docker Hub CLI
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u " $DOCKER_HUB_ID" --password-stdin
   # take the images and push them to Docker Hub
-  - docker push sireskip/milti-client
-  - docker push sireskip/milti-nginx
-  - docker push sireskip/milti-server
-  - docker push sireskip/milti-worker
+  - docker push sirskip/milti-client
+  - docker push sirskip/milti-nginx
+  - docker push sirskip/milti-server
+  - docker push sirskip/milti-worker
 
 
